@@ -1,17 +1,22 @@
 #include <iostream>
 using namespace std;
 
-void printMenu();
+class PruebaCard {
+private:
+  string description;
+public:
+  PruebaCard(string text) {
+    this->description = text;
+  }
+  void get_description() {
+    cout << description << endl;
+  }
+};
 
 int main() {
-  printMenu();
+  PruebaCard testeo = PruebaCard("Hola mundo"); 
+  testeo.get_description();
+
   return 0;
 }
 
-void printMenu() {
-  cout << "===============" << endl;
-  cout << "+  MEMOCARDS  +" << endl;
-  cout << "===============" << endl;
-
-  cout << "1. Estudiar cartas \n2. Agregar carta. \n3. Salir.\n" << endl;
-}

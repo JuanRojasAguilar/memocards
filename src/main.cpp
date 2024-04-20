@@ -10,17 +10,29 @@ void add_card_to_deck(SubjectCards deck);
 
 int main() {
   SubjectCards testDeck;
+  char res;
 
+  do {
   printMenu();
-  switch (choise()) {
+  
+  res = choise();
+
+  switch (res) {
     case '1':
       study_cards(testDeck);
       break;
     case '2':
       add_card_to_deck(testDeck);
       break;
+    case '3':
+      cout << "See ya!" << endl;
+      break;
+    default:
+      cout << "Invalid. Try again" << endl;
+      break;
   }
-  main();
+
+  } while (res != 3);
   return 0;
 }
 
@@ -44,11 +56,10 @@ void study_cards(SubjectCards deck) {
 
 void add_card_to_deck(SubjectCards deck) {
   Card card;
-  cout << "Add the card question" << endl;
-  card.get_question();
-  cout << "Add the card description" << endl;
-  card.get_description();
-  deck.addCard(card);
+  card.set_question();
+  cin.ignore();
+  card.set_description();
+  deck.add_card(card);
   cout << "Se ha añadido tu carta" << endl;
 }
 

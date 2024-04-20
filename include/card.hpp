@@ -5,16 +5,19 @@ class Card {
 private:
   string question;
   string description;
-
 public:
-  void get_question() {
+  Card() : question(""), description("") {}; //Constructor
+
+  void set_question() {
+    cout << "Please enter the question: ";
     getline(cin, question);
-    cout << question << endl;
+    cout << "Question: " << question << endl;
   }
 
-  void get_description() {
-    getline(cin, description);
-    cout << description << endl;
+  void set_description() {
+    cout << "Please enter the question: ";
+    getline(cin, question);
+    cout << "Question: " << question << endl;
   }
 
   void say_question() { cout << question << endl; }
