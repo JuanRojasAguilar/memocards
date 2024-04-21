@@ -15,9 +15,9 @@ public:
   }
 
   void set_description() {
-    cout << "Please enter the question: ";
+    cout << "Please enter the description: ";
     getline(cin, question);
-    cout << "Question: " << question << endl;
+    cout << "Description: " << description << endl;
   }
 
   void say_question() { cout << question << endl; }
