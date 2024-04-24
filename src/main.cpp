@@ -57,7 +57,7 @@ void study_cards(SubjectCards& deck) { // Pass by reference
 void add_card_to_deck(SubjectCards& deck) { // Pass by reference
   Card card;
   card.set_question();
-  card.set_description();
+  card.set_answer();
   deck.add_card(card);
   cout << "Se ha añadido tu carta" << endl;
 }

@@ -46,8 +46,11 @@ public:
   void show_cards() {
     if (!myCards.empty()) {
       for (size_t i = 0; i < myCards.size(); ++i) {
-        cout << (i + 1) << ". ";
+        cout << (i + 1) << ". " << endl;
+        cout << "Question: ";
         myCards[i].say_question();
+        cout << "Answer: ";
+        myCards[i].say_answer();
       }
     } else {
       cout << "There are no cards" << endl;

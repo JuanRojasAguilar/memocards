@@ -4,9 +4,9 @@ using namespace std;
 class Card {
 private:
   string question;
-  string description;
+  string answer;
 public:
-  Card() : question(""), description("") {}; //Constructor
+  Card() : question(""), answer("") {}; //Constructor
 
   void set_question() {
     cout << "Please enter the question: ";
@@ -14,13 +14,13 @@ public:
     cout << "Question: " << question << endl;
   }
 
-  void set_description() {
+  void set_answer() {
     cout << "Please enter the description: ";
-    getline(cin >> ws, question);
-    cout << "Description: " << description << endl;
+    getline(cin >> ws, answer);
+    cout << "Description: " << answer << endl;
   }
 
   void say_question() { cout << question << endl; }
 
-  void say_description() { cout << description << endl; }
+  void say_answer() { cout << answer << endl; }
 };
