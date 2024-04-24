@@ -10,13 +10,13 @@ public:
 
   void set_question() {
     cout << "Please enter the question: ";
-    getline(cin, question);
+    getline(cin >> ws, question);
     cout << "Question: " << question << endl;
   }
 
   void set_description() {
     cout << "Please enter the description: ";
-    getline(cin, question);
+    getline(cin >> ws, question);
     cout << "Description: " << description << endl;
   }
 
