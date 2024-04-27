@@ -1,7 +1,7 @@
 #include "./card.hpp"
-#include <cstdlib>
-#include <exception>
+#include <stdlib.h>
 #include <iostream>
+#include <exception>
 #include <vector>
 using namespace std;
 
@@ -45,10 +45,12 @@ public:
   }
 
   void show_cards() {
+    system("clear");
     if (!myCards.empty()) {
       for (size_t i = 0; i < myCards.size(); ++i) {
         cout << (i + 1) << ". " << endl;
         cout << "Question: ";
+        system("clear");
         myCards[i].say_question();
         cout << "Answer: ";
         myCards[i].say_answer();
@@ -59,9 +61,14 @@ public:
   }
 
   void show_random_cards() {
+    system("clear");
+    if (!myCards.empty()) {
       Card pickedCard = myCards[rand() % myCards.size()];
       pickedCard.say_question();
-      cin.get();
+      getc(stdin);
       pickedCard.say_answer();
+    } else {
+      cout << "There are no cards" << endl;
+    }
   }
 };
