@@ -51,7 +51,7 @@ char choice() {
 }
 
 void study_cards(SubjectCards& deck) { // Pass by reference
-  deck.show_cards();
+  deck.show_random_cards();
 }
 
 void add_card_to_deck(SubjectCards& deck) { // Pass by reference

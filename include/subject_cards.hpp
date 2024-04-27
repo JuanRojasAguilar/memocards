@@ -1,4 +1,5 @@
 #include "./card.hpp"
+#include <cstdlib>
 #include <exception>
 #include <iostream>
 #include <vector>
@@ -55,5 +56,12 @@ public:
     } else {
       cout << "There are no cards" << endl;
     }
+  }
+
+  void show_random_cards() {
+      Card pickedCard = myCards[rand() % myCards.size()];
+      pickedCard.say_question();
+      cin.get();
+      pickedCard.say_answer();
   }
 };
